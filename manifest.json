@@ -1,13 +1,24 @@
 {
-  "manifest_version": 2,
-
-  "name": "Modify CSS and HTML",
-  "version": "0.1.0",
-  "description": "Springtree Digital - Alignable calendar integration",
-
-  "content_scripts": [{
-    "css": ["styles.css"],
-    "js": ["content.js"],
-    "matches": ["https://www.alignable.com/*"],
-  }]
+	"manifest_version": 3,
+	"name"        : "Springtree Digital - Alignable calendar integration",
+	"version"     : "0.1.0",
+	"description" : "Modifies the Alignable.com event calendar button so that it actually adds to your calendar",
+	"content_scripts": [{
+		"css"     : ["styles.css"],
+		"js"      : ["content.js"],
+		"matches" : ["https://www.alignable.com/*"],
+		"run_at"  : "document_end"
+	}],
+	"action": {
+		"default_icon": {
+			"16": "extension_icon_16.png",
+			"32": "extension_icon_32.png"
+		}
+	},
+	"icons": {
+		"16"  : "extension_icon_16.png",
+		"32"  : "extension_icon_32.png",
+		"48"  : "extension_icon_48.png",
+		"128" : "extension_icon_128.png"
+	}
 }
